@@ -1,45 +1,97 @@
 # Learning Dashboard
 
-A futuristic learning dashboard built with Next.js, Supabase, Tailwind CSS, and Framer Motion.
-
-## Tech Stack
-
-* Next.js (App Router)
-* TypeScript
-* Supabase
-* Tailwind CSS
-* Framer Motion
-* Lucide React
+A modern learning progress dashboard built with Next.js, TypeScript, Tailwind CSS, Supabase, and Framer Motion.
 
 ## Features
 
-* Server-side data fetching using Next.js Server Components
-* Dynamic course cards fetched from Supabase
-* Animated progress bars
-* Staggered page-load animations
-* Hover interactions with Framer Motion
-* Loading skeletons using loading.tsx
-* Error handling for failed database requests
-* Responsive Bento Grid layout
-* Dynamic icon rendering from database values
+- Responsive dashboard layout
+- Dynamic course data from Supabase
+- Progress tracking cards
+- Learning activity heatmap
+- Reusable component architecture
+- Loading and error states
+- Smooth animations with Framer Motion
+- TypeScript support
 
-## Environment Variables
+## Tech Stack
 
-Create a `.env.local` file using the values shown in `.env.example`.
+- Next.js 16 (App Router)
+- TypeScript
+- Tailwind CSS
+- Supabase
+- Framer Motion
 
-Required variables:
+## Project Structure
 
-NEXT_PUBLIC_SUPABASE_URL
+```bash
+app/
+├── page.tsx
+├── loading.tsx
 
-NEXT_PUBLIC_SUPABASE_ANON_KEY
+components/
+├── Sidebar.tsx
+├── HeroTile.tsx
+├── CourseCard.tsx
+├── ActivityTile.tsx
+├── FadeIn.tsx
 
-## Architecture
+lib/
+└── supabase.ts
+```
 
-* `app/page.tsx` handles server-side data fetching.
-* Reusable UI components are stored in `components/`.
-* Supabase client configuration is located in `lib/supabase.ts`.
-* Framer Motion is used for hover effects and staggered animations.
+## Getting Started
 
-## Challenges
+Clone the repository:
 
-The primary challenge was combining Next.js Server Components with client-side Framer Motion animations while keeping the component structure modular and maintaining smooth UI interactions.
+```bash
+git clone https://github.com/harshali-nikumbh/learning-dashboard.git
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Create environment variables:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+Open:
+
+```text
+http://localhost:3000
+```
+
+## Database Schema
+
+Table: `courses`
+
+| Column      | Type      |
+|------------|-----------|
+| id         | uuid      |
+| title      | text      |
+| progress   | int4      |
+| icon_name  | text      |
+| created_at | timestamp |
+
+## Screenshots
+
+Add dashboard screenshots here after deployment.
+
+## Deployment
+
+Deployed using Vercel.
+
+## Author
+
+Harshali Nikumbh
