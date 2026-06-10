@@ -86,7 +86,8 @@ Table: `courses`
 
 ## Screenshots
 
-Add dashboard screenshots here after deployment.
+<img width="1888" height="892" alt="image" src="https://github.com/user-attachments/assets/30a51d00-acbd-4180-8606-573c5eaef3f3" />
+
 
 ## Deployment
 
